@@ -1,0 +1,36 @@
+{
+  "name": "issue-lexer",
+  "private": false,
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": "https://github.com/tresabhi/issue-lexer",
+  "bugs": "https://github.com/tresabhi/issue-lexer/issues",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "keywords": [
+    "github",
+    "issue",
+    "issues",
+    "parse",
+    "parser",
+    "lexer"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "release": "bun run build && changeset publish",
+    "lint": "tsc"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.1",
+    "@types/bun": "latest",
+    "tsup": "^8.4.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "yaml": "^2.7.1"
+  }
+}
